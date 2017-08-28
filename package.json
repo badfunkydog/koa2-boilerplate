@@ -8,15 +8,16 @@
   },
   "license": "MIT",
   "scripts": {
-    "run-landing": "exit 1",
-    "run-app": "exit 1",
+    "start": "node index.js",
     "test": "exit 1",
     "doc": "exit 1",
-    "tests": "exit 1",
     "staging": "exit 1",
     "production": "exit 1"
   },
   "dependencies": {
+    "babel-register": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-compose": "^4.0.0",
@@ -30,10 +31,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
     "eslint": "^4.5.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",

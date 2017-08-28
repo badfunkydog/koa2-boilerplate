@@ -8,11 +8,6 @@
 **/.idea/
 *.sublime-workspace
 
-# Ignore bundler binaries
-/bin/*
-!/bin/lint
-!/bin/start
-
 # Logs
 *.log*
 

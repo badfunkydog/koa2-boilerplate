@@ -2,6 +2,7 @@
   'extends': 'airbnb/base',
   'rules': {
     'quotes': [1],
+    'no-console': ['error', { allow: ['log'] }],
     'valid-jsdoc': [2, {
       'requireReturn': false,
       'requireReturnDescription': false,
@@ -13,9 +14,4 @@
   'env': {
     'node': true
   },
-  'globals': {
-    '__DEV__': true,
-    '__PRODUCTION__': true,
-    '__STAGING__': true,
-  }
 }
