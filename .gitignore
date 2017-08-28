@@ -1,0 +1,31 @@
+# Ignore cache
+.sass-cache
+.cache
+.tmp
+
+# IDE
+.idea
+**/.idea/
+*.sublime-workspace
+
+# Ignore bundler binaries
+/bin/*
+!/bin/lint
+!/bin/start
+
+# Logs
+*.log*
+
+# OS
+**/.DS_Store
+._*
+*~
+*.lock
+.Thumbs.db
+ehthumbs.db
+.Spotlight-V100
+.Trashes
+
+# Project
+node_modules
+package-lock.json

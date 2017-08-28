@@ -1,0 +1,21 @@
+{
+  'extends': 'airbnb/base',
+  'rules': {
+    'quotes': [1],
+    'valid-jsdoc': [2, {
+      'requireReturn': false,
+      'requireReturnDescription': false,
+      'prefer': {
+        'returns': 'return'
+      },
+    }],
+  },
+  'env': {
+    'node': true
+  },
+  'globals': {
+    '__DEV__': true,
+    '__PRODUCTION__': true,
+    '__STAGING__': true,
+  }
+}
