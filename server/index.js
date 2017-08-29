@@ -1,4 +1,5 @@
 import Koa from 'koa';
+import Router from 'koa-router';
 
 import compose from 'koa-compose';
 import convert from 'koa-convert';
@@ -8,7 +9,13 @@ import cors from 'koa-cors';
 import bodyParser from 'koa-bodyparser';
 import session from 'koa-session';
 
+import importDir from 'import-dir';
+
 const app = new Koa();
+const router = new Router();
+const routes = importDir('./routes');
+
+Object.keys(routes).forEach(name => routes[name](router));
 
 const SESSION_CONFIG = {
   key: 'koa:sess', /** (string) cookie key (default is koa:sess) */
@@ -22,6 +29,7 @@ const SESSION_CONFIG = {
   rolling: false, /** (boolean) Force a session identifier cookie to be set on every response. **/
 };
 
+// middleware
 app.use(
   compose([
     logger(),
@@ -29,6 +37,16 @@ app.use(
     convert(cors()),
     convert(bodyParser()),
     session(SESSION_CONFIG, app),
+  ]),
+);
+
+// auth
+
+// routes
+app.use(
+  compose([
+    router.routes(),
+    router.allowedMethods(),
   ]),
 );
 
