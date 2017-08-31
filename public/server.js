@@ -14,7 +14,6 @@ const port = process.env.PORT || config.DEFAULT_PORT;
 
   try {
     await app.listen(port);
-    console.log('Hello World!');
     console.log(`Server started on port ${port}`);
   } catch (error) {
     console.log(error);
